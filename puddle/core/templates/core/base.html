@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %} | Puddle</title>
+	<link rel="stylesheet" href="{% static 'main.css' %}">
+	{%block styles %}
+	{% endblock%}
+</head>
+
+<body>
+	<header>
+		<nav>
+			<a href="/">Puddle</a>
+			<div id="nav-menu">
+				<a href="#" class="nav-item">New Item</a>
+				<a href="#" class="nav-item">Browser</a>
+
+				<a href="#" id="sign-up">Sign Up</a>
+				<a href="#" id="login">Log in</a>
+			</div>
+		</nav>
+	</header>
+	<div>
+		{% block content %}
+		{% endblock %}
+	</div>
+	<footer>
+		<div>
+			<h3>About</h3>
+			<p>Lorem ipsum bla bla bla ....</p>
+		</div>
+
+		<div>
+			<h3>Menu</h3>
+			<ul>
+				<li><a href="#" class="list-item">About</a></li>
+				<li><a href="#" class="list-item">Contact</a></li>
+				<li><a href="#" class="list-item">Privacy Policy</a></li>
+				<li><a href="#" class="list-item">Term of use</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+
+</html>

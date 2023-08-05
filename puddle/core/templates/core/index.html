@@ -1,18 +1,11 @@
+{% extends 'core/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{%block styles %}
+	<link rel="stylesheet" href="{% static 'front.css' %}">
+{% endblock%}
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Puddle</title>
-	<link rel="stylesheet" href="{% static 'main.css' %}">
-</head>
+{% block title %}Welcome{% endblock %}
 
-<body>
-	<header>
-		<h1 class="front-title">The Front Page</h1>
-	</header>
-</body>
-
-</html>
+{% block content %}
+<h1 class="front-title">The Front Page</h1>
+{% endblock %}
