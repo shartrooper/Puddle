@@ -18,9 +18,16 @@
 	gap: 0.75rem;
 }
 
-.grid-item>a>div>img {
+.img-container>img {
 	border-top-left-radius: 0.75rem;
 	border-top-right-radius: 0.75rem;
+	width: 10.5rem;
+	height: 12rem;
+}
+
+.img-container {
+	display: grid;
+	place-items: center;
 }
 
 .item-info {
