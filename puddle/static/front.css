@@ -1,3 +1,40 @@
-.front-title {
-	padding: 1.8rem;
+.items {
+	margin: 0.5rem;
+	border-radius: 0.75rem;
+	background-color: rgb(226, 226, 226);
+	padding: 1rem;
+}
+
+.items>h2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.item-list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.75rem;
+}
+
+.grid-item>a>div>img {
+	border-top-left-radius: 0.75rem;
+	border-top-right-radius: 0.75rem;
+}
+
+.item-info {
+	padding: 1.5rem;
+	background-color: white;
+	border-bottom-right-radius: 0.75rem;
+	border-bottom-left-radius: 0.75rem;
+}
+
+.grid-item>a>div>h2 {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+
+.grid-item>a>div>p {
+	color: rgb(107 114 128);
 }
