@@ -1,0 +1,61 @@
+.form-container {
+	width: 50%;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(243 244 246);
+	border-radius: 0.75rem;
+}
+
+.form-container>h1 {
+	margin-bottom: 1.5rem;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	padding: 1.5rem;
+}
+
+form {
+	padding: 1.5rem;
+}
+
+form>button {
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+	background-color: teal;
+	color: whitesmoke;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	border-radius: 0.75rem;
+}
+
+form>button:hover {
+	background-color: #006666;
+}
+
+form>div,
+form>div>label {
+	margin-bottom: 0.75rem;
+}
+
+form>div>label {
+	display: inline-block;
+}
+
+.error-msg {
+	margin-bottom: 0.75rem;
+	padding: 1.5rem;
+	background-color: rgb(254 202 202);
+	border-radius: 0.75rem;
+}
+
+.input {
+	width: 95%;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	border-radius: 0.75rem;
+}

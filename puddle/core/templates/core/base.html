@@ -20,7 +20,7 @@
 				<a href="#" class="nav-item">New Item</a>
 				<a href="#" class="nav-item">Browser</a>
 
-				<a href="#" id="sign-up">Sign Up</a>
+				<a href="{% url 'core:signup' %}" id="sign-up">Sign Up</a>
 				<a href="#" id="login">Log in</a>
 			</div>
 		</nav>
@@ -39,7 +39,7 @@
 			<h3>Menu</h3>
 			<ul>
 				<li><a href="#" class="list-item">About</a></li>
-				<li><a href="#" class="list-item">Contact</a></li>
+				<li><a href="{% url 'core:contact' %}" class="list-item">Contact</a></li>
 				<li><a href="#" class="list-item">Privacy Policy</a></li>
 				<li><a href="#" class="list-item">Term of use</a></li>
 			</ul>
