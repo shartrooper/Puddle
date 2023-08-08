@@ -26,8 +26,8 @@ nav>a {
 }
 
 .nav-item,
-#sign-up,
-#login,
+#session-btn-1,
+#session-btn-2,
 footer>div>p {
 	font-size: 1.125rem;
 	line-height: 1.75rem;
@@ -37,27 +37,27 @@ footer>div>p {
 	color: slategray;
 }
 
-#sign-up,
-#login {
+#session-btn-1,
+#session-btn-2 {
 	padding: 1.2rem;
 	border-radius: 0.75rem;
 }
 
-#sign-up {
+#session-btn-1 {
 	background-color: teal;
 	color: white;
 }
 
-#sign-up:hover {
+#session-btn-1:hover {
 	background-color: #006666;
 }
 
-#login {
+#session-btn-2 {
 	background-color: darkgray;
 	color: white;
 }
 
-#login:hover {
+#session-btn-2:hover {
 	background-color: #808080;
 }
 

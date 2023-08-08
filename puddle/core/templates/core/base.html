@@ -19,9 +19,13 @@
 			<div id="nav-menu">
 				<a href="#" class="nav-item">New Item</a>
 				<a href="#" class="nav-item">Browser</a>
-
-				<a href="{% url 'core:signup' %}" id="sign-up">Sign Up</a>
-				<a href="#" id="login">Log in</a>
+				{% if request.user.is_authenticated %}
+				<a href="#" id="session-btn-1">Inbox</a>
+				<a href="#" id="session-btn-2">Dashboard</a>
+				{% else %}
+				<a href="{% url 'core:signup' %}" id="session-btn-1">Sign Up</a>
+				<a href="{% url 'core:login' %}" id="session-btn-2">Log in</a>
+				{% endif %}
 			</div>
 		</nav>
 	</header>
