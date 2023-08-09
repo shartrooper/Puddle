@@ -23,5 +23,6 @@ urlpatterns = [
     path('', include('core.urls')),
     #all url starting with item will go to the item namespace url
     path('items/', include('item.urls')),
+    path('dashboard/', include('dashboard.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

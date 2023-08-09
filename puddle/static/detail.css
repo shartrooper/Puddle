@@ -52,3 +52,10 @@
 #details-container>div>a:hover {
 	background-color: #006666;
 }
+
+#update-delete-container {
+	margin-top: 1.5rem;
+	padding: 1.2rem;
+	background-color: whitesmoke;
+	border-radius: 0.75rem;
+}

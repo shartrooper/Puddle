@@ -26,8 +26,8 @@ nav>a {
 }
 
 .nav-item,
-#session-btn-1,
-#session-btn-2,
+.session-btn-1,
+.session-btn-2,
 footer>div>p {
 	font-size: 1.125rem;
 	line-height: 1.75rem;
@@ -37,27 +37,27 @@ footer>div>p {
 	color: slategray;
 }
 
-#session-btn-1,
-#session-btn-2 {
+.session-btn-1,
+.session-btn-2 {
 	padding: 1.2rem;
 	border-radius: 0.75rem;
 }
 
-#session-btn-1 {
+.session-btn-1 {
 	background-color: teal;
 	color: white;
 }
 
-#session-btn-1:hover {
+.session-btn-1:hover {
 	background-color: #006666;
 }
 
-#session-btn-2 {
+.session-btn-2 {
 	background-color: darkgray;
 	color: white;
 }
 
-#session-btn-2:hover {
+.session-btn-2:hover {
 	background-color: #808080;
 }
 
