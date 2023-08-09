@@ -59,3 +59,9 @@ form>div>label {
 	padding-right: 1.5rem;
 	border-radius: 0.75rem;
 }
+
+#add-title {
+	margin-bottom: 1.5rem;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+}
