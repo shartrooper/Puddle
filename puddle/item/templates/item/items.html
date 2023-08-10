@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{%block styles %}
+<link rel="stylesheet" href="{% static 'items.css' %}">
+{% endblock %}
+{% block title %}Items{% endblock %}
+
+{% block content %}
+<div id="items-container">
+	<div>
+		<form method="get" action="{% url 'item:items' %}">
+			<input name="query" type="text" value="{{ query }}" placeholder="Find any stuff...">
+
+			<button>Search</button>
+		</form>
+
+		<p>Categories</p>
+
+		<ul>
+			{% for category in categories %}
+			<li class="{% if category.id == category_id %} same-category {% endif %}">
+				<a href="{% url 'item:items' %}?query={{ query }}&category={{ category.id }}">{{ category.name }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+
+		<p class="font-semibold">Clear filters</p>
+
+		<ul>
+         <li><a href="{% url 'item:items' %}" class="mt-2 py-4 px-8 inline-block bg-yellow-500 text-lg rounded-xl text-white">Clear</a>
+	</div>
+	<div>
+		<div class="item-list">
+			{% for item in items %}
+			<div class="grid-item">
+				<a href="{% url 'item:detail' item.id %}">
+					<div class="img-container">
+						<img src="{{ item.image.url }}" />
+					</div>
+
+					<div class="item-info">
+						<h2>{{ item.name }}</h2>
+						<p>Price: {{ item.price }} zenny</p>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock content %}
