@@ -8,7 +8,7 @@
 {% block content %}
 <h1 id="add-title">Edit an Item</h1>
 
-<form method="post" action="/items/{{pk}}/edit" enctype="multipart/form-data">
+<form method="post" action="{% url 'item:edit' pk %}" enctype="multipart/form-data">
     {% csrf_token %}
 
     <div>
