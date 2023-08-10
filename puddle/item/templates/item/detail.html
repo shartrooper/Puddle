@@ -24,17 +24,17 @@
         </p>
         {% endif %}
 
-        <a href="#">Contact seller</a>
-
+        
         {% if request.user == item.created_by %}
         <div id='update-delete-container'>
             <p>This is your item!</p>
-            <a href="#"
-                class="session-btn-1">Edit</a>
+            <a href="{% url 'item:edit' item.id %}"
+            class="session-btn-1">Edit</a>
             <a href="{% url 'item:delete' item.id %}"
-                class="session-btn-2">Delete</a>
+            class="session-btn-2">Delete</a>
         </div>
         {% else %}
+            <a href="#">Contact seller</a>
         {% endif %}
         {% comment "reserved for conversation feature" %}
         <a href="{% url 'conversation:new' item.id %}"
