@@ -39,7 +39,6 @@ def edit(req, pk):
     item = get_object_or_404(Item, pk=pk, created_by=req.user)
     if req.method == 'POST':
         form = EditItemForm(req.POST, req.FILES, instance=item)
-        logging.warning('this is the new edited object '+form.name)
         if form.is_valid():
             form.save()
 
@@ -47,7 +46,8 @@ def edit(req, pk):
     else:
         form = EditItemForm(instance=item)
 
-    return render(req, 'item/form.html', {
+    return render(req, 'item/editform.html', {
+        'pk': pk,
         'form': form,
         'title': 'Edit item',
     })
