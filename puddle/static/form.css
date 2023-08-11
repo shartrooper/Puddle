@@ -65,3 +65,24 @@ form>div>label {
 	font-size: 1.875rem;
 	line-height: 2.25rem;
 }
+
+.conv-item {
+	/*class="p-6 flex bg-gray-100 rounded-xl"*/
+	padding: 1.76rem;
+	display: flex;
+	background-color: rgb(243 244 246);
+	border-radius: 0.75rem;
+}
+
+.conv-item>div:first-child {
+	padding-right: 1.76rem;
+}
+
+.conv-item>div:first-child>img {
+	width: 5rem;
+	border-radius: 0.75rem;
+}
+
+.conv-item>div:last-child>p:first-child {
+	margin-bottom: 1.5rem;
+}

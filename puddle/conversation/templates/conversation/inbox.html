@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{%block styles %}
+<link rel="stylesheet" href="{% static 'form.css' %}">
+{% endblock %}
+{% block title %}Inbox{% endblock %}
+{% block content %}
+<h1 class="add-title">Inbox</h1>
+
+<div class="space-y-6">
+    {% for conversation in conversations %}
+        <a href="{% url 'conversation:detail' conversation.id %}">
+            <div class="conv-item">
+                <div>
+                    <img src="{{ conversation.item.image.url }}" >
+                </div>
+
+                <div>
+                    {% for member in conversation.members.all %}
+                        {% if member != request.user %}
+                            <p strong>{{ member.username }}</strong> | {{ conversation.modified_at }}</p>
+                            <p>{{ conversation.item.name }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+</div>
+{% endblock %}

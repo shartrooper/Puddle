@@ -34,14 +34,9 @@
             class="session-btn-2">Delete</a>
         </div>
         {% else %}
-            <a href="#">Contact seller</a>
-        {% endif %}
-        {% comment "reserved for conversation feature" %}
-        <a href="{% url 'conversation:new' item.id %}"
-        class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Contact
+        <a href="{% url 'conversation:new' item.id %}" class="session-btn-1">Contact
         seller</a>
         {% endif %}
-        {% endcomment %}
     </div>
 </div>
 <div class="items">
