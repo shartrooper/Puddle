@@ -7,17 +7,25 @@
 {% block content %}
 <h1 class="add-title">Conversation</h1>
 
-<div class="space-y-6">
+<div class="space-container-6">
 	{% for message in conversation.messages.all %}
 	<div class="conv-item">
 		<div
-			class="p-6 flex {% if message.created_by == request.user %}bg-blue-100{% else %}bg-gray-100{% endif %} rounded-xl">
+			class="{% if message.created_by == request.user %}highlight-blue{% else %}{% endif %}">
 			<div>
-				<p class="mb-4"><strong>{{ message.created_by.username }}</strong> @ {{ message.created_at }}</p>
+				<p><strong>{{ message.created_by.username }}</strong> @ {{ message.created_at }}</p>
 				<p>{{ message.content }}</p>
 			</div>
 		</div>
 	</div>
 	{% endfor %}
 </div>
+
+<form method="post" action="." class="reply">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button class="session-btn-1">Send</button>
+</form>
 {% endblock %}

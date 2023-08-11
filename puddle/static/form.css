@@ -86,3 +86,11 @@ form>div>label {
 .conv-item>div:last-child>p:first-child {
 	margin-bottom: 1.5rem;
 }
+
+.highlight-blue {
+	background-color: rgb(219 234 254);
+}
+
+.reply{
+	margin-top: 1.5rem;
+}
