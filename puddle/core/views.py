@@ -5,7 +5,7 @@ from .forms import SignupForm
 
 
 def index(req):
-    items = Item.objects.filter(is_sold=False)[0:6]
+    items = Item.objects.filter(is_sold=False).order_by('-created_at')[0:9]
     categories = Category.objects.all()
     return render(req, 'core/index.html', {
         'categories': categories,
