@@ -67,7 +67,6 @@ form>div>label {
 }
 
 .conv-item {
-	/*class="p-6 flex bg-gray-100 rounded-xl"*/
 	padding: 1.76rem;
 	display: flex;
 	background-color: rgb(243 244 246);
